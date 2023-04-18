@@ -1,0 +1,15 @@
+//Write a Program to input the two values through command line argument.
+// and display on screen, Save it with name Command.java in your folder.
+
+class Command {
+    public static void main(String[] args) {
+        if (args.length < 2) {
+            System.out.println("Error: You must provide two values as command-line arguments.");
+        } else {
+            double value1 = Double.parseDouble(args[0]);
+            double value2 = Double.parseDouble(args[1]);
+            System.out.println("Value 1: " + value1);
+            System.out.println("Value 2: " + value2);
+        }
+    }
+}
