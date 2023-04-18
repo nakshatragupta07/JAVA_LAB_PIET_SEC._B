@@ -1,0 +1,31 @@
+//1.7 Write a Program to
+//check the number is
+//Palindrome or not.
+
+import java.util.Scanner;
+
+class Palindrome {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = input.nextInt();
+
+        int reversedNumber = 0;
+        int originalNumber = number;
+
+        while (originalNumber != 0) {
+            int digit = originalNumber % 10;
+            reversedNumber = reversedNumber * 10 + digit;
+            originalNumber /= 10;
+        }
+
+        if (number == reversedNumber) {
+            System.out.println(number + " is a palindrome.");
+        } else {
+            System.out.println(number + " is not a palindrome.");
+        }
+
+        input.close();
+    }
+}
